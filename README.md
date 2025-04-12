@@ -27,6 +27,10 @@ yarn add @gio-shara/solana-hooks
 - `useMintTokenInfo` - Hook for fetching token mint information
 - `useLatestBlockhash` - Hook for getting the latest blockhash
 
+## Available Utils
+- `formatLamports` - Converts lamports values to SOL
+- `isValidSolanaAddress` - Checks the validity of a Solana address
+
 ## Peer Dependencies
 
 This package requires the following peer dependencies:
@@ -65,17 +69,20 @@ function App() {
 ## Usage
 
 ```tsx
-import { useConnection, useBalance } from "@gio-shara/solana-hooks";
+import { formatLamports } from "@gio-shara/solana-hooks/utils";
+import { useBalance } from "@gio-shara/solana-hooks";
 
-function ShowBalance() {
-  const { data: balance } = useBalance(publicKey);
+export const ShowBalance = () => {
+  const { data: balance = 0, isLoading: isBalanceLoading } = useBalance({
+    address: "7cbGX6WKXakVrDLpGWM4b9M29YbUqToEcyWu3VitmZQS",
+  });
+  
+  const formattedBalance = formatLamports(balance);
+  return <div>
+          <h2 className="text-lg font-bold">Show Balance</h2>
+    {!isBalanceLoading ? `Balance: ${formattedBalance}`: "Loading..."}</div>;
+};
 
-  return (
-    <div>
-      <p>Balance: {balance}</p>
-    </div>
-  );
-}
 ```
 
 ## Requirements

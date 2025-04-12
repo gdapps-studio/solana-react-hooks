@@ -4,13 +4,19 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@gio-shara/solana-hooks': file:../../packages/solana-hooks
+
 importers:
 
   .:
     dependencies:
       '@gio-shara/solana-hooks':
-        specifier: ^1.1.2
-        version: 1.1.2(@solana/spl-token@0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(utf-8-validate@5.0.10))(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(@tanstack/react-query@5.72.2(react@19.1.0))(react@19.1.0)
+        specifier: file:../../packages/solana-hooks
+        version: file:../../packages/solana-hooks(@solana/spl-token@0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(utf-8-validate@5.0.10))(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(@tanstack/react-query@5.72.2(react@19.1.0))(react@19.1.0)
+      '@solana/spl-token':
+        specifier: ^0.4.13
+        version: 0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@solana/web3.js':
         specifier: ^1.98.0
         version: 1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)
@@ -59,8 +65,8 @@ packages:
   '@emnapi/runtime@1.4.1':
     resolution: {integrity: sha512-LMshMVP0ZhACNjQNYXiU1iZJ6QCcv0lUdPDPugqGvCGXt5xtRVBPdtA0qU12pEXZzpWAhWlZYptfdAFq10DOVQ==}
 
-  '@gio-shara/solana-hooks@1.1.2':
-    resolution: {integrity: sha512-NkxL6VAjSmzV9wv04N2Ij3Z4H0mNHrrbj7ka5+mp/+fGeF9onSuY+8X6//+/tvo0DM+rYmEqIcQeC0gn0gVHaQ==}
+  '@gio-shara/solana-hooks@file:../../packages/solana-hooks':
+    resolution: {directory: ../../packages/solana-hooks, type: directory}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       '@solana/spl-token': ^0.4.13
@@ -820,7 +826,7 @@ snapshots:
       tslib: 2.8.1
     optional: true
 
-  '@gio-shara/solana-hooks@1.1.2(@solana/spl-token@0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(utf-8-validate@5.0.10))(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(@tanstack/react-query@5.72.2(react@19.1.0))(react@19.1.0)':
+  '@gio-shara/solana-hooks@file:../../packages/solana-hooks(@solana/spl-token@0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(utf-8-validate@5.0.10))(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(@tanstack/react-query@5.72.2(react@19.1.0))(react@19.1.0)':
     dependencies:
       '@solana/spl-token': 0.4.13(@solana/web3.js@1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10))(bufferutil@4.0.9)(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.8.3)(utf-8-validate@5.0.10)
       '@solana/web3.js': 1.98.0(bufferutil@4.0.9)(utf-8-validate@5.0.10)

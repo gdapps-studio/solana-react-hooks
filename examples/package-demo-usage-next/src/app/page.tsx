@@ -1,19 +1,17 @@
 "use client";
 
-import { SolanaHooksProvider, useBalance } from "@gio-shara/solana-hooks";
+import { SolanaHooksProvider } from "@gio-shara/solana-hooks";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Connection } from "@solana/web3.js";
-
-const ShowBalance = () => {
-  const { data: balance, error } = useBalance({
-    address: "7cbGX6WKXakVrDLpGWM4b9M29YbUqToEcyWu3VitmZQS",
-  });
-  console.log("balance", balance);
-  return <div>Balance {balance}</div>;
-};
+import { ShowBalance } from "./_components/ShowBalance";
+import { ShowMintInfo } from "./_components/ShowMintInfo";
 
 const queryClient = new QueryClient();
-const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+
+const connection = new Connection(
+  process.env.NEXT_PUBLIC_RPC_URL ?? '',
+  "confirmed"
+);
 
 export default function Home() {
   return (
@@ -24,6 +22,7 @@ export default function Home() {
         }}
       >
         <ShowBalance />
+        <ShowMintInfo />
       </SolanaHooksProvider>
     </QueryClientProvider>
   );

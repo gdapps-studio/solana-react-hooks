@@ -6,11 +6,16 @@
   "version": "1.1.2",
   "description": "This is a connection of React hooks for Solana using @solana/web3.js and @tanstack/react-query.",
   "author": "Giorgi Sharashenidze <gio.shara12345@gmail.com> (https://www.gdapps.studio/)",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
+    },
+    "./utils": {
+      "types": "./dist/utils/index.d.ts",
+      "require": "./dist/utils/index.js",
+      "import": "./dist/utils/index.mjs"
     }
   },
   "files": [

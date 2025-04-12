@@ -1,6 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import { useSolanaHooksContext } from "../provider";
-import { getMint, TOKEN_2022_PROGRAM_ID } from "@solana/spl-token";
+import {
+  getMint,
+  TOKEN_2022_PROGRAM_ID,
+  TOKEN_PROGRAM_ID,
+} from "@solana/spl-token";
 import { PublicKey } from "@solana/web3.js";
 import { isValidSolanaAddress } from "../utils/isValidSolanaAddress";
 
@@ -15,7 +19,7 @@ export const createMintTokenQueryKey = ({
 
 export const useMintTokenInfo = ({
   mintToken,
-  programId = TOKEN_2022_PROGRAM_ID,
+  programId = TOKEN_PROGRAM_ID,
 }: {
   mintToken: string | PublicKey;
   programId?: PublicKey;
