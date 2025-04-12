@@ -1,5 +1,11 @@
 # @gio-shara/solana-hooks
 
+## 1.2.0
+
+### Minor Changes
+
+- feat: implemented `useSmartMintTokenInfo` and `useAccountInfo` hook
+
 ## 1.1.6
 
 ### Patch Changes
