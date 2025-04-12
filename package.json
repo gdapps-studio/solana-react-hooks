@@ -3,7 +3,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This is a connection of React hooks for Solana using @solana/web3.js and @tanstack/react-query.",
   "author": "Giorgi Sharashenidze <gio.shara12345@gmail.com> (https://www.gdapps.studio/)",
   "types": "./dist/index.d.ts",

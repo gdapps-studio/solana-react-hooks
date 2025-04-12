@@ -68,7 +68,6 @@ function App() {
 import { useConnection, useBalance } from "@gio-shara/solana-hooks";
 
 function ShowBalance() {
-  const { connection } = useConnection();
   const { data: balance } = useBalance(publicKey);
 
   return (

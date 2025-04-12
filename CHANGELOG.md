@@ -1,5 +1,11 @@
 # @gio-shara/solana-hooks
 
+## 1.1.2
+
+### Patch Changes
+
+- updated README.md files for core package and next demo app
+
 ## 1.1.1
 
 ### Patch Changes
