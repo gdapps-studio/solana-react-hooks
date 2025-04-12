@@ -1,5 +1,11 @@
 # @gio-shara/solana-hooks
 
+## 1.1.4
+
+### Patch Changes
+
+- empty publishment
+
 ## 1.1.3
 
 ### Patch Changes
