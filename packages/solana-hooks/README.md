@@ -26,10 +26,12 @@ yarn add @gio-shara/solana-hooks
 - `useBalance` - Hook for fetching account balance
 - `useMintTokenInfo` - Hook for fetching token mint information
 - `useLatestBlockhash` - Hook for getting the latest blockhash
+- `useSmartMintTokenInfo` - Smartly checks the deployed mint token program and handles accordingly
 
 ## Available Utils
 - `formatLamports` - Converts lamports values to SOL
 - `isValidSolanaAddress` - Checks the validity of a Solana address
+- `truncateAddress` - Shortens addresses based on the passed length
 
 ## Peer Dependencies
 
