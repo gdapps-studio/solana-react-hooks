@@ -1,5 +1,11 @@
 # @gio-shara/solana-hooks
 
+## 1.1.6
+
+### Patch Changes
+
+- homepage and bugs urls
+
 ## 1.1.5
 
 ### Patch Changes
