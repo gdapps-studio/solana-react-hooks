@@ -1,5 +1,11 @@
 # @gio-shara/solana-hooks
 
+## 1.1.5
+
+### Patch Changes
+
+- added README.md
+
 ## 1.1.4
 
 ### Patch Changes
