@@ -1,5 +1,11 @@
 # @gio-shara/solana-hooks
 
+## 1.1.3
+
+### Patch Changes
+
+- solana hooks utils and updated docs
+
 ## 1.1.2
 
 ### Patch Changes
